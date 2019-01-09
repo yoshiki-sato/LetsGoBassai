@@ -49,8 +49,14 @@ public class EnemyMove : MonoBehaviour {
         //値格納
         float AngleRotation = zRotation;
 
+        //応急処置汎用性ゼロ
+        if(AngleRotation<-90){
+            AngleRotation = AngleRotation + 200;
+        }
+
         //取得した角度反映
         transform.rotation = Quaternion.Euler(0f, 0f, AngleRotation);
+
     }
 	
 	// Update is called once per frame
