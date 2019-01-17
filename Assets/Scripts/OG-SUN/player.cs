@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 public class player : MonoBehaviour {
 
     SpriteRenderer m_spriteRenderer;
+    AudioSource m_audioSource;
 
     bool deadby;
+
+    private void Start(){
+        m_audioSource = GetComponent<AudioSource>();
+    }
 
     void move(){
         deadby = false;
